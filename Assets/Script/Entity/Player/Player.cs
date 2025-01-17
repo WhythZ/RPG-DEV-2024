@@ -19,7 +19,7 @@ public class Player : Entity
     //引入人物的坠落状态
     public PlayerDashState dashState { get; private set; }
     //引入人物的冲刺状态
-    public playerWallSlideState wallSlideState { get; private set; }
+    public PlayerWallSlideState wallSlideState { get; private set; }
     //引入人物的滑墙状态
     public PlayerWallJumpState wallJumpState { get; private set; }
     //引入人物的墙跳状态
@@ -128,7 +128,7 @@ public class Player : Entity
         //初始化冲刺状态
         dashState = new PlayerDashState(this, stateMachine, "Dash");
         //初始化滑墙状态
-        wallSlideState = new playerWallSlideState(this, stateMachine, "WallSlide");
+        wallSlideState = new PlayerWallSlideState(this, stateMachine, "WallSlide");
         //初始化墙跳状态
         wallJumpState = new PlayerWallJumpState(this, stateMachine, "WallJump");
         //初始化第一段攻击
